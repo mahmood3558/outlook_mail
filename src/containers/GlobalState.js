@@ -26,7 +26,7 @@ const GlobalState = (props) => {
     sessionStorage.removeItem("graphUser");
     msalClient.logout();
     setToken("");
-    console.log(token);
+    // console.log(token);
   };
 
   return (

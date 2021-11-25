@@ -75,37 +75,37 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-text">
-              <Link to="/products">
+              <Link to="/archive">
                 <FiIcons.FiArchive />
                 <span>Archive</span>
               </Link>
             </li>
             <li className="nav-text">
-              <Link to="/products">
+              <Link to="/send">
                 <FiIcons.FiSend />
                 <span>Send</span>
               </Link>
             </li>
             <li className="nav-text">
-              <Link to="/products">
+              <Link to="/drafts">
                 <FiIcons.FiEdit3 />
                 <span>Drafts</span>
               </Link>
             </li>
             <li className="nav-text">
-              <Link to="/products">
+              <Link to="/spam">
                 <FiIcons.FiSlash />
                 <span>Spam</span>
               </Link>
             </li>
             <li className="nav-text">
-              <Link to="/reports">
+              <Link to="/trash">
                 <FiIcons.FiTrash2 />
                 <span>Trash</span>
               </Link>
             </li>
             <li className="nav-text">
-              <Link to="/products">
+              <Link to="/unwanted">
                 <FiIcons.FiXSquare />
                 <span>Unwanted</span>
               </Link>

@@ -1,8 +1,8 @@
-export const userImgReducer = (state = {}, action) => {
+export const mailFoldersReducer = (state = {}, action) => {
   switch (action.type) {
-    case "SET_USER_IMG":
+    case "SET_MAIL_FOLDERS":
       return { ...action.payload };
-    case "CLEAR_USER_IMG":
+    case "CLEAR_MAIL_FOLDERS":
       return { ...action.payload };
 
     default:

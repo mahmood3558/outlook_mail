@@ -8,5 +8,20 @@ export const msalConfig = {
 };
 
 export const msalRequest = {
-  scopes: ["user.read", "mailboxsettings.read", "calendars.readwrite"],
+  scopes: [
+    "user.read",
+    "mailboxsettings.read",
+    "calendars.readwrite",
+    // "Mail.Read",
+    // "Mail.ReadBasic",
+    // "Mail.ReadWrite",
+    "mail.read",
+    "mail.readBasic",
+    "mail.readWrite",
+    "mail.send",
+    // "mail",
+    // "mail.read.share",
+    // "mail.send.share",
+    // "mail.readwrite.share",
+  ],
 };

@@ -1,13 +1,27 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import * as FiIcons from "react-icons/fi";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
+import avatar from "../../img/avatar.png";
 
 import Context from "../../context/context";
+import { getUser, getUserImg } from "../../actions/user";
 
 function Header() {
   const context = useContext(Context);
   const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  // const userr = user[0];
+  // const userrr = userr[0];
   const userImg = useSelector((state) => state.userImg);
+  console.log("user");
+  console.log(user);
+  console.log("user");
+
+  useEffect(() => {
+    dispatch(getUser());
+    dispatch(getUserImg());
+  }, []);
 
   return (
     <div>
@@ -16,16 +30,16 @@ function Header() {
           <h1 className="textLogo">Outlook</h1>
         </div>
         <div className="avatar">
-          {/* <img className="avatar-img" src={userImg} alt="avatar"></img> */}
-          <img
+          <img className="avatar-img" src={avatar} alt="avatar"></img>
+          {/* <img
             className="avatar-img"
             // src={`data:image/jpeg;base64,${userImg}`}
             src={window.URL.createObjectURL(userImg)}
             alt="avatar"
-          ></img>
+          ></img> */}
           <div className="dropdown">
             <button className="dropbtn">
-              {user.displayName}
+              {user[0]?.displayName}
               <FiIcons.FiChevronDown />
             </button>
             <div className="dropdown-content">

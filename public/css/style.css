@@ -65,7 +65,8 @@
 
 .nav-text {
   display: flex;
-  justify-content: start;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding: 8px 0px 8px 16px;
   list-style: none;
@@ -202,4 +203,9 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.mail-count {
+  color: #5fbca2;
+  margin-left: auto;
 }

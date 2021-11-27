@@ -6,31 +6,64 @@ import Context from "../../context/context";
 import { Store } from "../../store";
 
 function Inbox() {
-  const context = useContext(Context);
   const dispatch = useDispatch();
 
   const folder = useSelector((state) => state.mailFolders);
-  const mail = useSelector((state) => state.messagesFolder);
   const mailFolderId = folder.value?.find((v) => v.displayName === "Inbox").id;
-  console.log("mailFolderId");
-  console.log(mailFolderId);
-  console.log("mailFolderId");
-  console.log("mailllllllll");
-  console.log(mail);
-  console.log("mailllllllll");
+
+  const messages = useSelector((state) => state.messagesFolder);
+  const mails = messages.value;
+  console.log(mails);
 
   useEffect(() => {
     dispatch(getMailFolders());
-    dispatch(getMessagesFolder(mailFolderId));
+    if (mailFolderId) {
+      dispatch(getMessagesFolder(mailFolderId));
+    }
   }, []);
 
   return (
-    <div>
-      <div className="home">
-        <h1>Inbox</h1>
+    <div className="page">
+      <div className=" container">
+        <div className="row">
+          <div className="col-md-4">From</div>
+          <div className="col-md-7">Subject</div>
+          <div className="col-md-1">Received</div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>
+          {mails?.map((mail) => {
+            return <div>{mail.from.emailAddress.name}</div>;
+          })}
+        </div>
       </div>
     </div>
   );
 }
 
 export default Inbox;
+
+Store.dispatch(getMailFolders());

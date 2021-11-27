@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Route, Routes } from "react-router";
 
+import Context from "../context/context.js";
+
 import Header from "../components/header/header.jsx";
 import Navbar from "../components/navbar/navbar";
 import Inbox from "../components/mailFolder/Inbox";
@@ -10,15 +12,10 @@ import Drafts from "../components/mailFolder/Drafts.jsx";
 import Spam from "../components/mailFolder/Spam.jsx";
 import Trash from "../components/mailFolder/Trash";
 import Unwanted from "../components/mailFolder/Unwanted.jsx";
-
-import Context from "../context/context.js";
-import LoginPage from "../components/loginPage.jsx";
+import LoginPage from "../components/login/loginPage";
 
 function Mail() {
   const context = useContext(Context);
-  console.log("context.token");
-  console.log(context.token);
-  console.log("context.token");
 
   // Route & Routes
   return (

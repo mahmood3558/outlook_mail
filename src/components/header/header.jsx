@@ -11,12 +11,7 @@ function Header() {
   const context = useContext(Context);
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  // const userr = user[0];
-  // const userrr = userr[0];
   const userImg = useSelector((state) => state.userImg);
-  console.log("user");
-  console.log(user);
-  console.log("user");
 
   useEffect(() => {
     dispatch(getUser());

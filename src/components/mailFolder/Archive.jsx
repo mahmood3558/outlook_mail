@@ -1,18 +1,27 @@
-import React, { useState, useContext } from "react";
-import { useSelector } from "react-redux";
+import React, { useState, useContext, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getMailFolders, getMessagesFolder } from "../../actions/user";
 
 function Archive() {
+  const dispatch = useDispatch();
+
   const folder = useSelector((state) => state.mailFolders);
-  const mailFolderId = folder[0].value.find(
+  const mailFolderId = folder.value?.find(
     (v) => v.displayName === "Archive"
   ).id;
 
+  const mail = useSelector((state) => state.messagesFolder);
+  console.log(mail);
+
+  useEffect(() => {
+    dispatch(getMailFolders());
+    if (mailFolderId) {
+      dispatch(getMessagesFolder(mailFolderId));
+    }
+  }, []);
+
   return (
-    <div className="products">
-      {/* <h1>{user.displayName}</h1>*/}
-      <button type="button" className="btn btn-secondary">
-        logout
-      </button>
+    <div className="page">
       <h1>Archive</h1>
     </div>
   );

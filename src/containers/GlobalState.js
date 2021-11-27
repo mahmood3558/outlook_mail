@@ -16,7 +16,7 @@ const GlobalState = (props) => {
       // Use MSAL to login
       const authResult = await msalClient.loginPopup(msalRequest);
       setToken(authResult.accessToken);
-      console.log(token);
+      localStorage.setItem("token", authResult.accessToken);
     } catch (error) {
       console.log(error);
     }
@@ -26,7 +26,6 @@ const GlobalState = (props) => {
     sessionStorage.removeItem("graphUser");
     msalClient.logout();
     setToken("");
-    // console.log(token);
   };
 
   return (

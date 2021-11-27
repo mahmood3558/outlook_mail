@@ -7,16 +7,13 @@ import * as AiIcons from "react-icons/ai";
 import * as FiIcons from "react-icons/fi";
 
 import Context from "../../context/context";
-import { getMailFolders } from "../../actions/user";
+import { getMailFolders, getMessagesFolder } from "../../actions/user";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const dispatch = useDispatch();
 
   const mailFolders = useSelector((state) => state.mailFolders);
-  console.log("mailFolders[0].value");
-  console.log(typeof mailFolders.value);
-  console.log("mailFolders[0].value");
 
   const showSidebar = () => setSidebar(!sidebar);
 

@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 
-import Context from "../context/context";
-import logout from "../img/Logo.png";
+import Context from "../../context/context";
+import log from "../../img/Logo.png";
 
 function LoginPage() {
   const context = useContext(Context);
 
   return (
     <div className=" LoginPage">
-      <img src={logout} alt="" className="img" />
+      <img src={log} alt="" className="img" />
       <button
         type="button"
         className="btn loginButton m-5"

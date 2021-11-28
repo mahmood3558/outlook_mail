@@ -49,7 +49,7 @@ function Mail() {
                 <Header />
                 <Navbar />
               </div>
-              <Routes>
+              <Routes className="m">
                 <Route path="/" element={<Inbox />} />
                 <Route path="/send" element={<Send />} />
                 <Route path="/archive" element={<Archive />} />

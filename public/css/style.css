@@ -17,8 +17,12 @@
   /* margin-top: 30px; */
   justify-content: start;
   font-size: 3rem;
+  padding-top: 120px;
 }
 .m {
+  top: 0;
+  position: relative;
+  height: 200px;
   /* margin-top: 30px; */
 }
 
@@ -35,7 +39,7 @@
 .header {
   position: relative;
   background-color: #5fbca2;
-  height: 60px;
+  height: 65px;
   width: 100%;
   display: flex;
   flex-direction: row;
